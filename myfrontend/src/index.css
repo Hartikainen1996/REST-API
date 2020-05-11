@@ -22,7 +22,7 @@ table {
 }
 td,
 th {
-  border: 1px solid #aaaaaa;
+  border: 1px solid black;
   padding: 6px 8px;
 }
 tr:nth-child(even) {
@@ -223,7 +223,7 @@ label {
   border: 1px solid black;
   display: inline-block;
   cursor: pointer;
-  color: black;
+  color: darkgrey;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
@@ -249,7 +249,7 @@ label {
   border: 1px solid black;
   display: inline-block;
   cursor: pointer;
-  color: black;
+  color: darkgrey;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
@@ -273,7 +273,7 @@ label {
   background: linear-gradient(to bottom, #dbe6c4 5%, lightcoral 100%);
   background-color: lightcoral;
   border-radius: 6px;
-  border: 1px solid #b2b8ad;
+  border: 1px solid black;
   display: inline-block;
   cursor: pointer;
   color: #757d6f;
@@ -287,8 +287,8 @@ label {
   margin-top: 5px;
 }
 .cancel:hover {
-  background: linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
-  background-color: #9ba892;
+  background: linear-gradient(to bottom, #9ba892 5%, pink 100%);
+  background-color: pink;
 }
 .cancel:active {
   position: relative;
