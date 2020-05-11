@@ -29,7 +29,7 @@ tr:nth-child(even) {
   background: #cfcfcf;
 }
 th {
-  background: lightblue;
+  background: lightcoral;
   border-bottom: 3px solid #b3b3b3;
   font-size: 15px;
   font-weight: normal;
@@ -164,7 +164,7 @@ label {
     border-bottom: 0;
   }
 }
-
+/*Searchbar */
 /* HAKUPALKKI */
 .searchBar {
   outline: none;
@@ -200,7 +200,7 @@ label {
 .searchBar[type="search"]:focus {
   width: 90%;
   background-color: #fff;
-  border-color: red;
+  border-color: lightcoral;
 
   -webkit-box-shadow: 0 0 5px rgba(2, 2, 2, 0.5);
   -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
@@ -248,7 +248,7 @@ label {
   border: 1px solid black;
   display: inline-block;
   cursor: pointer;
-  color: #103aff;
+  color: black;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
@@ -270,7 +270,7 @@ label {
 .cancel {
   box-shadow: inset 0px 0px 14px -3px #f2fadc;
   background: linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
-  background-color: #dbe6c4;
+  background-color: lightcoral;
   border-radius: 6px;
   border: 1px solid #b2b8ad;
   display: inline-block;
@@ -319,6 +319,7 @@ label {
 .responsive {
   width: 100%;
   height: auto;
+  border: solid 3px black;
 }
 
 img {
