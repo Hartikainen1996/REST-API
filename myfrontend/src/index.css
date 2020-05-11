@@ -29,7 +29,7 @@ tr:nth-child(even) {
   background: #cfcfcf;
 }
 th {
-  background: #000000;
+  background: lightblue;
   border-bottom: 3px solid #b3b3b3;
   font-size: 15px;
   font-weight: normal;
@@ -215,20 +215,20 @@ label {
 }
 
 .toggle {
-  box-shadow: inset 0px 1px 0px 0px #caefab;
+  box-shadow: inset 0px 1px 0px 0px grey;
   background: linear-gradient(to bottom, lightblue 5%, lightblue 100%);
   background-color: lightblue;
   border-radius: 10em;
   border: 1px solid black;
   display: inline-block;
   cursor: pointer;
-  color: #306108;
+  color: black;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
   padding: 6px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #aade7c;
+  text-shadow: 0px 1px 0px grey;
   margin-bottom: 10px;
 }
 .toggle:hover {
@@ -241,26 +241,26 @@ label {
 }
 
 .addNew {
-  box-shadow: inset 0px 1px 0px 0px #caefab;
+  box-shadow: inset 0px 1px 0px 0px grey;
   background: linear-gradient(to bottom, lightblue 5%, lightblue 100%);
   background-color: lightblue;
   border-radius: 6px;
   border: 1px solid black;
   display: inline-block;
   cursor: pointer;
-  color: #306108;
+  color: #103aff;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
   padding: 8px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #aade7c;
+  text-shadow: 0px 1px 0px grey;
   margin-top: 12px;
   width: 100%;
 }
 .addNew:hover {
-  background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
-  background-color: #5cb811;
+  background: linear-gradient(to bottom, lightblue 5%, #103aff 100%);
+  background-color: lightblue;
 }
 .addNew:active {
   position: relative;
