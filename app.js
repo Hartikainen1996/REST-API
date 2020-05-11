@@ -6,16 +6,20 @@ var cors = require("cors");
 var app = express();
 
 // This is needed to deploy the app on Heroku
+// Tämä pitää tehdä, että Heroku toimii
 var path = require("path");
 app.use(express.static(path.join(__dirname, "myfrontend/build")));
 // Enabling cors
+// Laitetaan cors toimimaan
 app.use(cors());
 // support parsing of application/json type post data
 app.use(express.json());
 // Specifying the port
+// Määritetään portti
 const port = process.env.PORT || 5000;
 
 // Specifying the connection address and options
+// Määritetään databasen yhteys ja asetukset
 var uri = "mongodb+srv://kayttaja:sala1234@cluster0-smrfa.mongodb.net/animal";
 var options = {
   useNewUrlParser: true,
@@ -23,11 +27,13 @@ var options = {
 };
 
 // Connecting to the database
+// Yhdistetään databaseen
 mongoose.connect(process.env.MONGODB_URI || uri, options);
 
 var db = mongoose.connection;
 
 // Defining a mongoose model
+// Määritetään mongoosen malli
 const Animal = mongoose.model(
   "Animal",
   {
@@ -40,9 +46,11 @@ const Animal = mongoose.model(
   },
 
   "animal" // This is the collection that is going to be used
+  // animal collectionia tullaan käyttämään tässä apissa
 );
 
 // Handling errors / success
+// Hallitsee errorit ja onnistumiset
 db.on("error", function () {
   console.log("Connection error!");
 });
@@ -52,11 +60,14 @@ db.once("open", function () {
 });
 
 // parsing support
+// parsii tuen
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 // Creating routes and functionalities
+// Tekee reitit ja toiminnallisuudet
 
 // Retrieving ALL animals
+// Hakee kaikki eläimet tietokannasta
 app.get("/api/getall", function (req, res) {
   Animal.find({}, null, function (err, results) {
     // Handling errors, returning status
@@ -92,6 +103,7 @@ app.get("/api/get/:id", function (req, res) {
 });
 
 // Formatting the date to the format dd/mm/yyyy
+// Määritetään että päivämäärä tulee muotoa dd/mm/yyyy
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
 var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
@@ -99,7 +111,7 @@ var yyyy = today.getFullYear();
 
 today = dd + "/" + mm + "/" + yyyy;
 
-// Luodaan uusi tallennettava olio
+// Luodaan uusi tallennettava olio (Animal)
 // Creating a new object
 app.post("/api/add", function (req, res) {
   console.log(req.body);
@@ -112,7 +124,7 @@ app.post("/api/add", function (req, res) {
     pvm: today,
   });
 
-  // Tallennetaan olio tietokantaan
+  // Tallennetaan olio tietokantaan (Animal)
   // Saving the object to the database
   newAnimal.save(function (err, results) {
     // Handling errors
@@ -121,6 +133,7 @@ app.post("/api/add", function (req, res) {
       console.log("Something went wrong" + err);
     }
     // Sending the succesful results back
+    // Lähettää onnistuneet tulokset takaisin
     else {
       res.status(200).json("Lisätty tietokantaan: \n" + results);
       console.log("Added:" + results);
@@ -129,8 +142,10 @@ app.post("/api/add", function (req, res) {
 });
 
 // Muokataan eläimen tietoja id-numeron perusteella.
+// Editing Animal information with id-number
 app.put("/api/update/:id", function (req, res) {
   // Poimitaan id talteen
+  // Collection id
   var id = req.params.id;
 
   Animal.findByIdAndUpdate(
@@ -149,6 +164,7 @@ app.put("/api/update/:id", function (req, res) {
         console.log("Järjestelmässä tapahtui virhe" + err);
       }
       // Muuten lähetetään tietokannan tulokset selaimelle
+      // Otherwise sending results of database to browser
       else {
         res.status(200).json("Päivitetty: \n" + results);
         console.log("Päivitetty: " + results);
@@ -186,6 +202,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Web-palvelimen luonti Expressin avulla
+// Making of web with Express
 app.listen(port, function () {
   console.log("Using port " + port);
 });
