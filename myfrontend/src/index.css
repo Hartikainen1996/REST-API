@@ -223,13 +223,13 @@ label {
   border: 1px solid black;
   display: inline-block;
   cursor: pointer;
-  color: darkgrey;
+  color: black;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
   padding: 6px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px black;
+  text-shadow: 0px 1px 0px darkgrey;
   margin-bottom: 10px;
 }
 .toggle:hover {
@@ -249,13 +249,13 @@ label {
   border: 1px solid black;
   display: inline-block;
   cursor: pointer;
-  color: darkgrey;
+  color: black;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
   padding: 8px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px black;
+  text-shadow: 0px 1px 0px darkgrey;
   margin-top: 12px;
   width: 100%;
 }
@@ -276,13 +276,13 @@ label {
   border: 1px solid black;
   display: inline-block;
   cursor: pointer;
-  color: #757d6f;
+  color: black;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
   padding: 8px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px black;
+  text-shadow: 0px 1px 0px darkgrey;
   width: 100%;
   margin-top: 5px;
 }
