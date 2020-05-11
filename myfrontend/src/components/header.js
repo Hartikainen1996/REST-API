@@ -8,8 +8,8 @@ class Header extends React.Component {
         <h1>Tervetuloa löytöeläin sivustolle!</h1>
         <p>
           Oletko hukannut lemmikkisi ja tahtoisit tehdä siitä ilmoituksen? Tällä
-          sivustolla voit lisätä uuden löytöeläimen tietokantaan, poistaa
-          löytäeläimen tietokannasta ja etsiä löytäeläintä tietokannasta.
+          sivustolla voit lisätä uuden eläimen tietokantaan, poistaa eläimen
+          tietokannasta ja etsiä eläintä tietokannasta.
         </p>
       </div>
     );
