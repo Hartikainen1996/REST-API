@@ -6,10 +6,13 @@ class Header extends React.Component {
       <div className="header">
         <img className="responsive" src="eläimet.png"></img>
         <h1>Tervetuloa löytöeläin sivustolle!</h1>
+        <h2>
+          Oletko hukannut lemmikkisi ja tahtoisit tehdä siitä ilmoituksen?
+        </h2>
+
         <p>
-          Oletko hukannut lemmikkisi ja tahtoisit tehdä siitä ilmoituksen? Tällä
-          sivustolla voit lisätä uuden eläimen tietokantaan, poistaa eläimen
-          tietokannasta ja etsiä eläintä tietokannasta.
+          Tällä sivustolla voit lisätä uuden eläimen tietokantaan, poistaa
+          eläimen tietokannasta ja etsiä eläintä tietokannasta.
         </p>
       </div>
     );
