@@ -287,7 +287,7 @@ label {
   margin-top: 5px;
 }
 .cancel:hover {
-  background: linear-gradient(to bottom, #9ba892 5%, pink 100%);
+  background: linear-gradient(to bottom, grey 5%, pink 100%);
   background-color: pink;
 }
 .cancel:active {
