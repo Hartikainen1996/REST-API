@@ -26,7 +26,7 @@ th {
   padding: 6px 8px;
 }
 tr:nth-child(even) {
-  background: #cfcfcf;
+  background: lightcoral;
 }
 th {
   background: lightblue;
