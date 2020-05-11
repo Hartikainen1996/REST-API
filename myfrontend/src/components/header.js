@@ -5,9 +5,10 @@ class Header extends React.Component {
     return (
       <div className="header">
         <img className="responsive" src=""></img>
-        <h1>Tervetuloa löytöeläin sivulle!</h1>
+        <h1>Tervetuloa löytöeläin sivustolle!</h1>
         <p>
-          Täällä voit lisätä uuden löytöeläimen tietokantaan, poistaa
+          Oletko hukannut lemmikkisi ja tahtoisit tehdä siitä ilmoituksen? Tällä
+          sivustolla voit lisätä uuden löytöeläimen tietokantaan, poistaa
           löytäeläimen tietokannasta ja etsiä löytäeläintä tietokannasta.
         </p>
       </div>

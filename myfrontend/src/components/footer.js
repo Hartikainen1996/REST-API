@@ -9,7 +9,6 @@ class Footer extends React.Component {
             Made by{" "}
             <a href="https://github.com/Hartikainen1996">Eemil Hartikainen</a>
           </label>
-          <span> © 2020 All Rights Reserved</span>
         </p>
       </div>
     );
